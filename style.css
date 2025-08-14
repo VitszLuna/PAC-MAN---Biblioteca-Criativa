@@ -1,155 +1,118 @@
+*{
+  font-family: "Poppins", sans-serif;
+  }
+
+
 body, html {
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
   height: 100%;
-  background: white;
+  background: rgb(0, 0, 0);
   font-family: 'DM Serif Text', serif;
   overflow: hidden;
 }
 
 .container {
-  position: relative;
   width: 100%;
-  height: 100vh; /* tela cheia vertical */
-  border: black;
+  height: 100vh;
+  position: relative;
 }
 
-/* Retângulo amarelo animado */
-.rectangle {
-  width: 200px;
-  height: 100px;
-  background: yellow;
+/* GIF centralizado no início */
+.gif-screen {
   position: absolute;
-  top: 20%; /* altura para ficar mais ou menos centro vertical */
-  left: -220px; /* fora da tela esquerda */
-  animation: slideRight 5s linear forwards, fadeOut 0.5s forwards;
-  animation-delay: 0s, 4.5s; /* fadeOut começa perto do final da slide */
-  animation-fill-mode: forwards;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeOut 1s forwards;
+  animation-delay: 5s;
+  z-index: 5;
+}
+
+.gif-screen img {
+  width: 600px;
+}
+
+/* Tela final (PAC BOOKS + NAV) aparece após delay */
+.final-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  text-align: center;
+  animation: fadeIn 1s forwards;
+  animation-delay: 5s;
   z-index: 10;
 }
 
-@keyframes slideRight {
-  to {
-    left: 110%; /* sai para fora da tela direita */
-  }
+
+
+
+
+
+/* NAV */
+.nav {
+  margin: 20px auto 0;
+  text-align: center;
+  font-size: 16px;
+  
 }
 
+.nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
+  font-family: arvo;
+}
+
+.nav li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  color: #ffffff;
+}
+
+.nav ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: rgb(0, 0, 0);
+
+  transition: all 0.3s ease;
+}
+
+.nav ul li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav ul li ul li {
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+
+.nav ul li ul li a:hover {
+  padding-left: 10px;
+  border-left: 2px solid #3ca0e7;
+  transition: all 0.3s ease;
+}
+
+/* ANIMAÇÕES */
 @keyframes fadeOut {
   to {
     opacity: 0;
   }
 }
 
-/* Texto e imagem centralizados, escondidos inicialmente */
-.final-screen {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  pointer-events: none;
-  text-align: center;
-  color: black;
-  animation: showFinal 1s forwards;
-  animation-delay: 5s; /* depois da animação do retângulo */
-}
-
-@keyframes showFinal {
+@keyframes fadeIn {
   to {
     opacity: 1;
-    pointer-events: auto;
   }
 }
-
-.final-screen h1 {
-  font-size: 4rem;
-  margin: 0;
-}
-
-.final-screen img {
-  width: 150px;
-  margin-top: 20px;
-}
-
-
-nav {
-  &.nav {
-    margin: 0 auto;
-    display: block;
-  
-    padding: 120px 0 0 0;  
-    text-align: center;
-    font-size: 16px;
-
-    ul li {
-      list-style: none;
-      margin: 0 auto;
-      border-left: 2px solid #3ca0e7;
-      display: inline-block;
-      padding: 0 30px;
-      position: relative;
-      text-decoration: none;
-      text-align: center;
-      font-family: arvo;
-    }
-
-    li a {
-      color: black;
-    }
-
-    li a:hover {
-      color: #3ca0e7;
-    }
-
-    li:hover {
-      cursor: pointer;
-    }
-
-    ul li ul {
-      visibility: hidden;
-      opacity: 0;
-      position: absolute;
-padding-left: 0;
-      left: 0;
-      display: none;
-      background: white;
-    }
-
-    ul li:hover > ul,
-    ul li ul:hover {
-      visibility: visible;
-      opacity: 1;
-      display: block;
-      min-width: 250px;
-      text-align: left;
-      padding-top: 20px;
-      box-shadow: 0px 3px 5px -1px #ccc;
-    }
-
-    ul li ul li {
-      clear: both;
-      width: 100%;
-      text-align: left;
-      margin-bottom: 20px;
-      border-style: none;
-    }
-
-    ul li ul li a:hover {
-      padding-left: 10px;
-      border-left: 2px solid #3ca0e7;
-      transition: all 0.3s ease;
-    }
-  }
-}
-
-a {
-
-    text-decoration: none;
-
-    &:hover {
-        color: #3CA0E7;
-    }
- 
-}
-
- ul li ul li a { transition: all 0.5s ease; }
-
