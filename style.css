@@ -1,7 +1,10 @@
 /* RESET */
 body {
-  margin: 0; 
+  margin: 0;
+ font-family: 'Lora', serif;
+  
 }
+
 
 .container {
   width: 100vw;            
@@ -95,55 +98,81 @@ body {
 .formulario button:hover {
   background: gold;
 }
-
-/*Home*/
 .nav {
   margin: 20px auto 0;
   text-align: center;
   font-size: 16px;
-  padding: 20px 0; /* espaço para respiro */
-  
+  padding: 20px 0;
 }
+
+/* Itens principais da navbar */
 .nav ul li {
   list-style: none;
   display: inline-block;
   margin: 0 15px;
   position: relative;
-  font-family: arvo;
+  font-family: 'Arvo', serif;
 }
+
+/* Links da navbar */
 .nav li a {
-  color: rgb(0, 0, 0);
+  color: #3A3A3A;
   text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: color 0.3s;
 }
+
 .nav li a:hover {
-  color: #000000;
+  color: #141657;
 }
+
+/* Submenu */
 .nav ul li ul {
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
   position: absolute;
   left: 0;
   top: 100%;
-  background: rgb(0, 0, 0);
+  background: #FFD54F; /* amarelo claro */
+  padding: 0;
+  min-width: 160px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-}
-.nav ul li:hover > ul {
-  visibility: visible;
-  opacity: 1;
-}
-.nav ul li ul li {
-  display: block;
-  padding: 10px;
-  width: 100%;
-}
-.nav ul li ul li a:hover {
-  padding-left: 10px;
-  border-left: 2px solid #3ca0e7;
-  transition: all 0.3s ease;
+  z-index: 10;
 }
 
+/* Mostrar submenu ao passar o mouse */
+.nav ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Itens do submenu */
+.nav ul li ul li {
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+
+/* Links do submenu */
+.nav ul li ul li a {
+  display: block;
+  padding: 12px 16px;
+  color: #3A3A3A;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+/* Hover do submenu */
+.nav ul li ul li a:hover {
+  background-color: #FBC02D; /* amarelo médio */
+  color: white;
+  border-left: 4px solid #141657;
+}
 .container2{
-width: 100vw;             /* largura total da tela */
+width: 100vw;           
   height: auto;
 }
 
@@ -152,11 +181,54 @@ width: 100vw;             /* largura total da tela */
  background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 900px;
-  height: 700px;
+  width: 1000px;
+  height: 900px;
   margin: 0px auto 0 auto; 
   position: relative;
-  bottom: 70px;
+
+}
+
+.imglogo {
+  width: 300px;
+  position: absolute;
+  top: 2px; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+.retangulo {
+  width: 100vw;     /* largura */
+  height: 15px;    
+  background-color:#DFB200;
+  position: absolute;
+  top: 80px;
+}
+
+.texto h3{
+  width: 300px;
+  position: absolute;
+    top: 180px; 
+  left: 57%;
+  font-size: 10px;
+  color: white;
+}
+
+.texto h4{
+  width: 300px;
+  position: absolute;
+    top: 200px; 
+  left: 57%;
+  font-size: 10px;
+}
+
+.texto p{
+  width: 300px;
+  position: absolute;
+    top: 100px; 
+  right: 36%;
+  font-size: 10px;
 }
 
 
