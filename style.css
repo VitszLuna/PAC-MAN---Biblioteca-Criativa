@@ -7,9 +7,11 @@ body {
 }
 
 .container2 {
-  width: 100vw;
-  height: auto;
-  position: relative;
+   width: 100%;
+  max-width: 1800px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 /* ---------- LOGO ---------- */
@@ -87,7 +89,7 @@ body {
   border-left: 4px solid #141657;
 }
 
-/* ---------- RETÂNGULO AMARELO ---------- */
+
 .retangulo {
   width: 120px;
   height: 8px;
@@ -205,15 +207,13 @@ body {
 
 }
 
-button{
+.botaoindex{
    position: absolute;
   top: 940px;
   left: 45%;
   text-align: center;
   font-size: 16px;
   font-weight:700;
-
-
   border-radius: 50px;
   width: 150px;
   height: 50px;
@@ -243,28 +243,6 @@ button{
   font-weight:700;
 }
 
-:root {
-  --primary-gold: #dfb200;
-  --light-gold: #ffd54f;
-  --medium-gold: #fbc02d;
-  --dark-gold: #c49f00;
-  --dark-blue: #141657;
-  --text-dark: #3a3a3a;
-  --text-medium: #555;
-  --text-light: #666;
-  --white-transparent: rgba(255, 255, 255, 0.9);
-  --white-semi: rgba(255, 255, 255, 0.8);
-}
-
-/* Body e estrutura principal */
-body {
-  font-family: "Lora", serif;
-  line-height: 1.6;
-  color: var(--text-dark);
-  background-color: #f5f5f5;
-}
-
-
 
 /* Header */
 .header {
@@ -285,19 +263,18 @@ body {
   color: var(--dark-blue);
   font-weight: 500;
 }
-* CSS específico para página de contato - PAC BOOKS */
 
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Contatoss */
+.container {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-/* Fontes */
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Arvo:wght@400;700&display=swap");
 
-/* Variáveis de cores - mesma paleta do site principal */
 :root {
   --primary-gold: #dfb200;
   --light-gold: #ffd54f;
@@ -311,110 +288,8 @@ body {
   --white-semi: rgba(255, 255, 255, 0.8);
 }
 
-/* Body e estrutura principal */
-body {
-  font-family: "Lora", serif;
-  line-height: 1.6;
-  color: var(--text-dark);
-  background-color: #f5f5f5;
-}
 
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-/* Header */
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header h1 {
-  font-family: "Arvo", serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--primary-gold);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  margin-bottom: 10px;
-}
-
-.header p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  color: var(--dark-blue);
-  font-weight: 500;
-}
-
-/* Container principal */
-.contact-container {
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 50px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(15px);
-  border: 2px solid rgba(223, 178, 0, 0.2);
-}
-
-/* Seção de informações */
-.contact-info h2 {
-  font-family: "Arvo", serif;
-  color: var(--dark-blue);
-  font-size: 1.8rem;
-  margin-bottom: 25px;
-  border-bottom: 3px solid var(--primary-gold);
-  padding-bottom: 10px;
-  text-align: center;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  padding: 15px;
-  background: var(--white-semi);
-  border-radius: 10px;
-  border-left: 4px solid var(--primary-gold);
-}
-
-.info-item i {
-  font-size: 1.5rem;
-  color: var(--primary-gold);
-  margin-right: 15px;
-  width: 30px;
-}
-
-.info-item div h3 {
-  color: var(--dark-blue);
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-.info-item div p {
-  color: var(--text-medium);
-  font-size: 0.95rem;
-}
-
-/* Formulário */
-.contact-form h2 {
-  font-family: "Arvo", serif;
-  color: var(--dark-blue);
-  font-size: 1.8rem;
-  margin-bottom: 25px;
-  border-bottom: 3px solid var(--primary-gold);
-  padding-bottom: 10px;
-  text-align: center;
-}
 
 .form-group {
   margin-bottom: 20px;
@@ -447,63 +322,9 @@ body {
   box-shadow: 0 0 10px rgba(223, 178, 0, 0.3);
   background: white;
 }
+ 
 
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
 
-/* Botão de envio */
-.submit-btn {
-  background: linear-gradient(135deg, var(--primary-gold), var(--medium-gold));
-  color: white;
-  padding: 18px 35px;
-  border: none;
-  border-radius: 12px;
-  font-family: "Arvo", serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(223, 178, 0, 0.3);
-}
-
-.submit-btn:hover {
-  background: linear-gradient(135deg, var(--dark-gold), var(--primary-gold));
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(223, 178, 0, 0.5);
-}
-
-/* Link de volta */
-.back-link {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.back-link a {
-  color: var(--dark-blue);
-  text-decoration: none;
-  font-weight: 600;
-  padding: 15px 30px;
-  border: 2px solid var(--primary-gold);
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.back-link a:hover {
-  background: var(--primary-gold);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(223, 178, 0, 0.4);
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
   .main-wrapper {
     background-size: cover;
@@ -519,19 +340,6 @@ body {
     margin: 20px 0;
   }
 
-  .header h1 {
-    font-size: 2.5rem;
-  }
-
-  .info-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .info-item i {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -548,4 +356,61 @@ body {
   .contact-form h2 {
     font-size: 1.5rem;
   }
+}
+
+
+.botaocont{
+  background: linear-gradient(135deg, var(--primary-gold), var(--medium-gold));
+  color: white;
+  padding: 18px 35px;
+  border: none;
+  border-radius: 12px;
+  font-family: "Arvo", serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(223, 178, 0, 0.3);
+}
+
+   /*LIVROS*/
+
+.container3{
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.divLeft {
+    width: 100%;
+    height: 18px;
+    float: left;
+    position: relative;
+}
+
+#spaceText {
+    padding-right: 16px;
+}
+
+#photo {
+    width: 100%;
+    height: 400px;
+}
+
+.textDiv{
+   position: absolute;
+   top: 100px;
+  margin-left: 50%;
+   font-size: 50px;
+
+   /*cor apenas para exmplo*/
+   color: #000000;
 }
