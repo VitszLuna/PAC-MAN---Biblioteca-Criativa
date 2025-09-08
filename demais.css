@@ -71,12 +71,7 @@
 }
 
 
-
-
-
-
-.livraria{
-      width: 1210px; 
-     height: 300px;
-     z-index: 3;
+.imgcarr{
+  width: 50%;
+  height: auto;
 }
