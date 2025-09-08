@@ -1,0 +1,137 @@
+/* -------------------- BLOCO PRINCIPAL -------------------- */
+.retangulo {
+  width: 120px;
+  height: 8px;
+  background-color: var(--primary-gold);
+  margin: -15px auto 40px;
+  border-radius: 4px;
+}
+
+.bloco {
+  background-image: url(img/fundo1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 1000px;
+  height: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ---------- TEXTOS DO BLOCO ---------- */
+.texto {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  left: 55%;
+}
+
+.texto h3 {
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
+
+.texto h2 {
+  position: absolute;
+  top: 210px;
+  font-weight: 10;
+  font-size: 15px;
+}
+
+.bloco h1 {
+  position: absolute;
+  left: 22%;
+  top: 130px;
+  font-size: 50px;
+}
+
+.bloco .h1logo {
+  position: absolute;
+  left: 19%;
+  top: 170px;
+  font-size: 50px;
+}
+
+.bloco h4 {
+  position: absolute;
+  left: 10%;
+  top: 260px;
+}
+
+.textosegundobloco {
+  position: absolute;
+  top: 645px;
+  left: 12%;
+  width: 25%;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.textosegundobloco2 {
+  position: absolute;
+  top: 740px;
+  left: 26%;
+  width: 20%;
+  text-align: justify;
+  font-size: 14px;
+}
+
+.textosegundobloco3 {
+  position: absolute;
+  top: 570px;
+  left: 65%;
+  width: 20%;
+  text-align: justify;
+  font-size: 15px;
+}
+
+.textosegundobloco4 {
+  position: absolute;
+  top: 660px;
+  left: 58%;
+  width: 20%;
+  text-align: justify;
+  font-size: 15px;
+}
+
+.ultimo {
+  position: absolute;
+  top: 850px;
+  left: 37%;
+  width: 30%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ---------- BOTÃO ---------- */
+.botaoindex {
+  position: absolute;
+  top: 940px;
+  left: 45%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 50px;
+  width: 150px;
+  height: 50px;
+  background-color: var(--primary-gold);
+  color: #3A3A3A;
+}
+
+/* ---------- IMAGENS ---------- */
+.comendoimg {
+  width: 300px;
+  position: absolute;
+  top: 500px;
+  left: 2%;
+}
+
+.pac45 {
+  width: 200px;
+  position: absolute;
+  top: 300px;
+  left: 75%;
+}
+

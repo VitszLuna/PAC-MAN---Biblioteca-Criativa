@@ -1,0 +1,82 @@
+/* ---------- Container da animação ---------- */
+.animacao {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 400px; /* altura do bloco */
+ 
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ---------- GIF Pac-Man ---------- */
+.pacman {
+  width: 400px; 
+  height: auto;
+  animation: desaparecer 1s forwards;
+  animation-delay: 1s; 
+}
+
+/* ---------- Texto ---------- */
+.texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  animation: aparecer 1s forwards;
+  animation-delay: 2s; /* aparece após 3s */
+}
+
+.texto h1 {
+  font-size: 2.5rem;
+  color: #141657;
+}
+
+.texto p {
+  font-size: 1.2rem;
+  color: #3a3a3a;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes aparecer {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes desaparecer {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+
+.container-blocos {
+  display: flex;         
+  gap: 20px;            
+  justify-content: center; 
+}
+
+.bloco {
+  width: 390px;
+  height: 200px;
+  background-color: #fff;
+  display: flex;           
+  align-items: flex-start; 
+  justify-content: center; 
+}
+
+
+
+
+
+
+.livraria{
+      width: 1210px; 
+     height: 300px;
+     z-index: 3;
+}
